@@ -5,7 +5,7 @@ This build pack allows you to easily deploy meteor apps to heroku using [meteori
 ## Usage
 
 ```bash
-heroku create --stack cedar --buildpack https://github.com/oortcloud/heroku-buildpack-meteorite.git
+heroku create --stack cedar --buildpack https://github.com/mimah/heroku-buildpack-meteorite.git
 ```
 
 Then `git push` to heroku as usual.
