@@ -165,7 +165,7 @@ echo "-----> Installing meteorite with npm"
 run_npm "install meteorite -g"
 echo "Meteorite installed" | indent
 
-METEOR_BUILD_DIR="$BUILD_DIR/.meteor/heroku_build"
+METEOR_BUILD_DIR="$BUILD_DIR"
 mkdir -p "$HOME"
 ############################################
 # install meteor + packages through mrt
@@ -178,7 +178,7 @@ echo "Building meteor bundle" | indent
 HOME="$BUILD_DIR" mrt bundle $CACHE_DIR/bundle.tar.gz 2>&1 | indent
 echo "Bundled" | indent
 mkdir -p $METEOR_BUILD_DIR/app
-tar -zxf $CACHE_DIR/bundle.tar.gz -C $METEOR_BUILD_DIR/app
+tar -zxf $CACHE_DIR/bundle.tar.gz -C $METEOR_BUILD_DIR
 rm $CACHE_DIR/bundle.tar.gz
 ############################################
 
